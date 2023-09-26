@@ -12,7 +12,7 @@ const ListeParticipant = () => {
  }, []);
     
     const loadData = async () => {
-    const response = await axios.get('http://62.171.178.129:3000/participant/all');
+    const response = await axios.get('https://trova.vip/participant/all');
     console.log("liste assemble");
     console.log(response.data);
     setParticipant(response.data);

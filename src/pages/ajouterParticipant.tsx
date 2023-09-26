@@ -17,7 +17,7 @@ const AjoutParticipant = () => {
         const values = await form.validateFields();
         console.log( values);
         try {
-      const response = await axios.post('http://62.171.178.129:3000/participant/add', values, {
+      const response = await axios.post('https://trova.vip/participant/add', values, {
         headers: {
           'Content-Type': 'application/json',
         },
@@ -47,7 +47,7 @@ const AjoutParticipant = () => {
     };
 
     const loadData = async () => {
-        const response = await axios.get('http://62.171.178.129:3000/participant/all');
+        const response = await axios.get('https://trova.vip/participant/all');
         console.log("liste assemble");
         console.log(response.data);
         setParticipant(response.data);
